@@ -1,0 +1,6 @@
+1.install react
+
+*npm -v
+*npm --version
+
+2. add header component
