@@ -12,6 +12,8 @@ add button to the header, which can be another component
 we put our task object array in App level because we want access to the from other components.
 
 *learn redux
+*array.map( () =>{} )  is function and should return something
+*array.map( () =>() ) will do () for each array shouldnt return anything it can be component or tag ...
 
 
 

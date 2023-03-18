@@ -1,11 +1,11 @@
+import Task from "./Task";
+
 const Tasks = ({ tasks }) => {
   return (
     <div className="Tasks">
-      <div className=" px-5 py-5">
+      <div className="py-4 pb-5">
         {tasks.map((task) => (
-          <h4 className="border p-2 shadow-sm" key={task.id}>
-            {task.text}
-          </h4>
+          <Task key={task.id} task={task} />
         ))}
       </div>
     </div>
