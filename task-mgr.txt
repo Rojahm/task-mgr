@@ -4,5 +4,9 @@
 *npm --version
 
 2. add header component
-you can add boostratp to style
+can use default props for its title and name,...
+you can add boostrap to style
+add button to the header, which can be another component
+
+
 
