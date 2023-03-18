@@ -8,5 +8,7 @@ can use default props for its title and name,...
 you can add boostrap to style
 add button to the header, which can be another component
 
+3. add tasks component
+
 
 
