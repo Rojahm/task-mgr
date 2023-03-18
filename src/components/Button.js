@@ -14,6 +14,7 @@ const Button = ({ title, color, bgcolor, border, padding, borderRadius }) => {
     </div>
   );
 };
+
 Button.defaultProps = {
   title: "button",
   bgcolor: "#bc2243",
