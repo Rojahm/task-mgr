@@ -1,5 +1,3 @@
-import React from "react";
-
 const Button = ({ title, color, bgcolor, border, padding, borderRadius }) => {
   const ButtonStyle = {
     backgroundColor: bgcolor,
