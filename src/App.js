@@ -23,11 +23,19 @@ function App() {
       remider: false,
     },
   ]);
+  //delete task
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
   return (
     <div className="App">
       <div className="container border mt-4 shadow-sm rounded">
         <Header />
-        <Tasks tasks={tasks} />
+        {tasks.length > 0 ? (
+          <Tasks tasks={tasks} onDelete={deleteTask} />
+        ) : (
+          <p className="text-center my-4">need to add a task!</p>
+        )}
       </div>
     </div>
   );

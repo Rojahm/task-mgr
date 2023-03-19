@@ -1,17 +1,19 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
-const Task = ({ task }) => {
+const Task = ({ task, onDelete }) => {
   return (
     <div className="Task">
-      <div class="d-flex border rounded mb-3 px-4 py-1 mx-4 shadow-sm justify-content-between">
+      <div className="d-flex border rounded mb-3 px-4 py-1 mx-4 shadow-sm justify-content-between">
         <div className="">
           <h4>{task.text}</h4>
           <p className="mb-1">{task.day}</p>
         </div>
         <div className="mt-3">
-          <a href="/" className="pe-auto">
-            <FaTimes color="red" />
-          </a>
+          <FaTimes
+            color="red"
+            style={{ cursor: "pointer" }}
+            onClick={() => onDelete(task.id)}
+          />
         </div>
       </div>
     </div>

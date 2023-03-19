@@ -15,5 +15,5 @@ we put our task object array in App level because we want access to the from oth
 *array.map( () =>{} )  is function and should return something
 *array.map( () =>() ) will do () for each array shouldnt return anything it can be component or tag ...
 
-
+onClick={() => onDelete(task.id)} not             onClick={onDelete}(work onClick) nor (renders for every array item!)onClick={onDelete(task.id)} or onClick={onDelete()}
 
