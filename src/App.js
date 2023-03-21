@@ -8,31 +8,43 @@ function App() {
       id: 1,
       text: "Doctors Appoinment",
       day: "Feb 5th at 2:30pm",
-      remider: true,
+      reminder: true,
     },
     {
       id: 2,
       text: "Meeting at School",
       day: "Feb 6th at 1:30pm",
-      remider: true,
+      reminder: true,
     },
     {
       id: 3,
       text: "Food Shopping",
       day: "Feb 5th at 2:30pm",
-      remider: false,
+      reminder: false,
     },
   ]);
   //delete task
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
+  //on double click toggle reminder value and add reminder style
+  const onDoubleClick = (id) => {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, reminder: !task.reminder } : task
+      )
+    );
+  };
   return (
     <div className="App">
       <div className="container border mt-4 shadow-sm rounded">
         <Header />
         {tasks.length > 0 ? (
-          <Tasks tasks={tasks} onDelete={deleteTask} />
+          <Tasks
+            tasks={tasks}
+            onDelete={deleteTask}
+            onReminder={onDoubleClick}
+          />
         ) : (
           <p className="text-center my-4">need to add a task!</p>
         )}
