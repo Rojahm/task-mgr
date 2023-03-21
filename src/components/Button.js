@@ -6,6 +6,7 @@ const Button = ({
   padding,
   borderRadius,
   lineHeight,
+  onClick,
 }) => {
   const ButtonStyle = {
     backgroundColor: bgcolor,
@@ -16,9 +17,9 @@ const Button = ({
     lineHeight: lineHeight,
   };
   return (
-    <div className="Button">
-      <button style={ButtonStyle}>{title}</button>
-    </div>
+    <button className="Button" style={ButtonStyle} onClick={onClick}>
+      {title}
+    </button>
   );
 };
 
