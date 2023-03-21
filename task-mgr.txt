@@ -38,4 +38,12 @@ is worst version of:
       return;
     }
     addTask({ text, day, reminder });
+
+6. toggle add task form
+
 ** when you dont want to return anything just checking a condition
+
+        {showAddTask && <AddTask addTask={addTask} />}
+
+
+
