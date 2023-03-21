@@ -20,3 +20,22 @@ onClick={() => onDelete(task.id)} not             onClick={onDelete}(work onClic
 4. add remider function and style
 
 more regex and backtick shit
+
+5. add AddTask component to add Task! 
+
+*make ./component/Button component reuseable!
+* each input is going to have its own component level state
+
+** when you what to return something
+    if (!text) {
+      alert("Enter a Task!");
+    } else {
+      addTask({ text, day, reminder });
+    }
+is worst version of:
+    if (!text) {
+      alert("Enter a Task!");
+      return;
+    }
+    addTask({ text, day, reminder });
+** when you dont want to return anything just checking a condition

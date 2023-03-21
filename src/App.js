@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
+import AddTask from "./components/AddTask";
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -23,6 +24,13 @@ function App() {
       reminder: false,
     },
   ]);
+
+  //add task
+  const addTask = (task) => {
+    const id = Math.round(Math.random() * 10000) + 1;
+    const newTask = { id, ...task };
+    setTasks([...tasks, newTask]);
+  };
   //delete task
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
@@ -39,6 +47,7 @@ function App() {
     <div className="App">
       <div className="container border mt-4 shadow-sm rounded">
         <Header />
+        <AddTask addTask={addTask} />
         {tasks.length > 0 ? (
           <Tasks
             tasks={tasks}
